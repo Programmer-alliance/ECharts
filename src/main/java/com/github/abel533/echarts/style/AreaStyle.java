@@ -26,6 +26,8 @@ package com.github.abel533.echarts.style;
 
 import java.io.Serializable;
 
+import com.github.abel533.echarts.style.itemstyle.Normal;
+
 /**
  * 区域填充样式
  *
@@ -33,88 +35,113 @@ import java.io.Serializable;
  */
 public class AreaStyle implements Serializable {
 
-    private static final long serialVersionUID = -6547716731700677234L;
+	private static final long serialVersionUID = -6547716731700677234L;
 
-    /**
-     * 颜色
-     */
-    private Object color;
-    /**
-     * 填充样式，目前仅支持'default'(实填充)
-     */
-    private Object type;
+	/**
+	 * 颜色
+	 */
+	private Object color;
+	/**
+	 * 填充样式，目前仅支持'default'(实填充)
+	 */
+	private Object type;
 
-    /**
-     * 获取color值
-     */
-    public Object color() {
-        return this.color;
-    }
+	private Normal normal;
 
-    /**
-     * 设置color值
-     *
-     * @param color
-     */
-    public AreaStyle color(Object color) {
-        this.color = color;
-        return this;
-    }
+	/**
+	 * 获取color值
+	 */
+	public Object color() {
+		return this.color;
+	}
 
-    /**
-     * 获取type值
-     */
-    public Object type() {
-        return this.type;
-    }
+	/**
+	 * 设置color值
+	 *
+	 * @param color
+	 */
+	public AreaStyle color(Object color) {
+		this.color = color;
+		return this;
+	}
 
-    /**
-     * 设置type值
-     *
-     * @param type
-     */
-    public AreaStyle type(Object type) {
-        this.type = type;
-        return this;
-    }
+	/**
+	 * 获取type值
+	 */
+	public Object type() {
+		return this.type;
+	}
 
-    /**
-     * 获取typeDefault值
-     */
-    public AreaStyle typeDefault() {
-        this.type = "default";
-        return this;
-    }
+	/**
+	 * 设置type值
+	 *
+	 * @param type
+	 */
+	public AreaStyle type(Object type) {
+		this.type = type;
+		return this;
+	}
 
-    /**
-     * 获取color值
-     */
-    public Object getColor() {
-        return color;
-    }
+	/**
+	 * 获取typeDefault值
+	 */
+	public AreaStyle typeDefault() {
+		this.type = "default";
+		return this;
+	}
 
-    /**
-     * 设置color值
-     *
-     * @param color
-     */
-    public void setColor(Object color) {
-        this.color = color;
-    }
+	/**
+	 * 获取color值
+	 */
+	public Object getColor() {
+		return color;
+	}
 
-    /**
-     * 获取type值
-     */
-    public Object getType() {
-        return type;
-    }
+	/**
+	 * 设置color值
+	 *
+	 * @param color
+	 */
+	public void setColor(Object color) {
+		this.color = color;
+	}
 
-    /**
-     * 设置type值
-     *
-     * @param type
-     */
-    public void setType(Object type) {
-        this.type = type;
-    }
+	/**
+	 * 获取type值
+	 */
+	public Object getType() {
+		return type;
+	}
+
+	/**
+	 * 设置type值
+	 *
+	 * @param type
+	 */
+	public void setType(Object type) {
+		this.type = type;
+	}
+
+	public Normal normal() {
+		return this.normal;
+	}
+
+	/**
+	 * 设置color值
+	 *
+	 * @param color
+	 */
+	public AreaStyle normal(Normal normal) {
+		this.normal = normal;
+		return this;
+	}
+
+	public Normal getNormal() {
+		return normal;
+	}
+
+	public void setNormal(Normal normal) {
+		this.normal = normal;
+	}
+
 }

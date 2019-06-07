@@ -28,4 +28,42 @@ package com.github.abel533.echarts.style.itemstyle;
  * @author liuzh
  */
 public class Normal extends Style<Normal> {
+
+	private Integer width;
+
+	private String areaColor;
+
+	public Integer width() {
+		return this.width;
+	}
+
+	public String areaColor() {
+		return this.areaColor;
+	}
+
+	public Normal width(int width) {
+		this.width = width;
+		return this;
+	}
+
+	public Normal areaColor(String areaColor) {
+		this.areaColor = areaColor;
+		return this;
+	}
+
+	public Integer getWidth() {
+		return width;
+	}
+
+	public String getAreaColor() {
+		return areaColor;
+	}
+
+	public void setWidth(Integer width) {
+		this.width = width;
+	}
+
+	public void setAreaColor(String areaColor) {
+		this.areaColor = areaColor;
+	}
 }

@@ -24,11 +24,34 @@
 
 package com.github.abel533.echarts.style;
 
+import com.github.abel533.echarts.DataRange;
+import com.github.abel533.echarts.DataZoom;
+import com.github.abel533.echarts.Grid;
+import com.github.abel533.echarts.Legend;
+import com.github.abel533.echarts.Option;
+import com.github.abel533.echarts.Polar;
+import com.github.abel533.echarts.RoamController;
+import com.github.abel533.echarts.Timeline;
+import com.github.abel533.echarts.Title;
+import com.github.abel533.echarts.Toolbox;
+import com.github.abel533.echarts.Tooltip;
+import com.github.abel533.echarts.axis.AngleAxis;
+import com.github.abel533.echarts.axis.Axis;
+import com.github.abel533.echarts.axis.RadiusAxis;
 import com.github.abel533.echarts.code.Baseline;
+import com.github.abel533.echarts.code.Easing;
 import com.github.abel533.echarts.code.FontStyle;
+import com.github.abel533.echarts.code.Symbol;
 import com.github.abel533.echarts.code.X;
+import com.github.abel533.echarts.option.NoDataLoadingOption;
+import com.github.abel533.echarts.series.Series;
+import com.github.abel533.echarts.style.itemstyle.Normal;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 文字样式
@@ -36,6 +59,8 @@ import java.io.Serializable;
  * @author liuzh
  *         Created by liuzh on 14-8-25.
  */
+@Getter
+@Setter
 public class TextStyle implements Serializable {
 
     private static final long serialVersionUID = 5748410562515851843L;
@@ -47,7 +72,7 @@ public class TextStyle implements Serializable {
     /**
      * 水平对齐方式，可选为：'left' | 'right' | 'center'
      *
-     * @see com.github.abel533.echarts.code.X
+     * @see X
      */
     private X align;
     /**
@@ -81,21 +106,28 @@ public class TextStyle implements Serializable {
      * @see com.github.abel533.echarts.code.FontWeight
      */
     private Object fontWeight;
-    /**
-     * 背景色
-     */
-    private String backgroundColor;
-    /**
-     * 文字块的圆角
-     */
-    private Object borderRadius;
-    /**
-     * 边距
-     */
-    private Object padding;
-
+    
+    private Normal normal;
 
     /**
+     * 获取normal
+     * 
+     */
+    public Normal normal() {
+		return this.normal;
+	}
+
+    /**
+     * 设置normal
+     *
+     * @param normal
+     */
+	public TextStyle normal(Normal normal) {
+		this.normal = normal;
+		return this;
+	}
+
+	/**
      * 获取baseline值
      */
     public Baseline baseline() {
@@ -391,38 +423,5 @@ public class TextStyle implements Serializable {
     public void setBaseline(Baseline baseline) {
         this.baseline = baseline;
     }
-
-    /**
-     * 背景色
-     *
-     * @param backgroundColor
-     * @return
-     */
-    public TextStyle backgroundColor(String backgroundColor) {
-        this.backgroundColor = backgroundColor;
-        return this;
-    }
-
-    /**
-     * 文字块的圆角
-     *
-     * @param borderRadius
-     * @return
-     */
-    public TextStyle borderRadius(Object borderRadius) {
-        this.borderRadius = borderRadius;
-        return this;
-    }
-
-    /**
-     * 边距
-     *
-     * @param padding
-     * @return
-     */
-    public TextStyle padding(Object padding) {
-        this.padding = padding;
-        return this;
-    }
-
 }
+
