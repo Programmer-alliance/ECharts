@@ -1,6 +1,7 @@
 # ECharts - Java类库
 
-## 本项目已暂停维护，只接受PR并小版本更新
+## 本项目已暂停维护，只接受PR并小版本更新,
+## 本项目开始重写-Kel Lee
 
 **当前版本[![Maven central](https://maven-badges.herokuapp.com/maven-central/com.github.abel533/ECharts/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.abel533/ECharts)**
 
